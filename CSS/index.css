@@ -1,80 +1,230 @@
-body{
-    background-color: rgba(20, 19, 19, 0.738);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.all {
-     border: 3px solid black;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
 }
 
-.heading {
-     width: 100%;
-     height: 80px;
-     background: black;
-     display: flex;
-     align-items: center;
-     position: relative;
-     outline: red 5px solid;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.heading:hover {
-    height: 120px; 
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-.heading img {
-     width: 70px;
-     height: 70px;
-}
-
-.buttons {
-     display: flex;
-     justify-content: space-evenly;
-     flex-grow: 1;
-     margin-left: 20px; 
-}
-
-.buttons a {
-     text-decoration: none;
-}
-
-.buttons button {
-     color: white;
-     background-color: rgba(80, 80, 80, 0.738);
-     padding: 2%;
-     font-size: medium;
-     width: 120px; 
-     height: 60px;
-     font-weight: bold;
-     border: none;
-     border-radius: 30px;
-}
-
-.buttons button:hover {
-    font-family: 'Brush Script MT', cursive;
+a#button1 {
+    background-color: transparent;  
+    position: relative;
     color: lightgreen;
-    font-size: 200%;
 }
 
-.buttons button:active {
-    border: 5px solid rgba(20, 19, 19, 0.738);
-    color: lightgreen;
-    font-size: 130%;
-    background-color: rgba(60,60,60,0.738);
+a#button1::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: lightgreen; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.buttons #button1:hover::after {
-    display: none;
+a#button1:hover::after {
+    opacity: 1;
 }
 
-.buttons #button1:nth-child(1) {
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    height: 150px;
+}
+
+header:hover {
+    height: 180px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-content img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    margin-left: 15px;
+}
+
+nav ul li a {
     position: relative;
 }
 
-.buttons #button1:nth-child(1):after {
+nav ul li a::after {
     content: "";
     position: absolute;
+    bottom: -2px;
     left: 0;
-    bottom: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: lightgreen;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    opacity: 1;
+}
+
+nav ul li a:hover {
+    color: lightgreen;
+}
+
+.container-below {
+    max-width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+    width: 2px;
+    background-color: #ccc;
+    height: 80%;
+    margin: 0 20px;
+}
+
+.left-side {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left-side img {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 10px;
+    position:absolute;
+    bottom:5%;
+    left:25%;
+}
+
+.social-icons #insta {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:55%;
+    left:25%;
+}
+
+.social-icons #twitter{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:55%;
+    left:35%;
+}
+
+.social-icons #facebook{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:55%;
+    left:45%;
+}
+
+.social-icons #linkedin {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:55%;
+    left:55%;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-description {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
