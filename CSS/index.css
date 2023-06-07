@@ -1,3 +1,7 @@
+body{
+    background-color: rgba(20, 19, 19, 0.738);
+}
+
 .all {
      border: 3px solid black;
 }
@@ -5,10 +9,11 @@
 .heading {
      width: 100%;
      height: 80px;
-     background: rgba(20, 19, 19, 0.738);
+     background: black;
      display: flex;
      align-items: center;
      position: relative;
+     outline: red 5px solid;
 }
 
 .heading:hover {
@@ -16,8 +21,6 @@
 }
 
 .heading img {
-     border: 5px solid rgba(20, 19, 19, 0.738);
-     border-radius: 50%;
      width: 70px;
      height: 70px;
 }
@@ -49,4 +52,29 @@
     font-family: 'Brush Script MT', cursive;
     color: lightgreen;
     font-size: 200%;
+}
+
+.buttons button:active {
+    border: 5px solid rgba(20, 19, 19, 0.738);
+    color: lightgreen;
+    font-size: 130%;
+    background-color: rgba(60,60,60,0.738);
+}
+
+.buttons #button1:hover::after {
+    display: none;
+}
+
+.buttons #button1:nth-child(1) {
+    position: relative;
+}
+
+.buttons #button1:nth-child(1):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: lightgreen;
 }
