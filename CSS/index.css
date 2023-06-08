@@ -110,22 +110,14 @@ nav ul li a:hover {
 
 .container-below {
     max-width: 90%;
-    height: 500px;
-    margin: 0 auto;
-    padding: 20px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.divider {
-    width: 2px;
-    background-color: #ccc;
-    height: 80%;
-    margin: 0 20px;
+    background-color: rgb(240, 180, 174);
+    position: relative;
 }
 
 .left-side {
@@ -134,17 +126,21 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin:0;
+    padding:0;
+    left:0;
 }
 
-.left-side img {
-    width: 200px; 
-    height: 200px;
-    border-radius: 50%;
-    background-size: cover;
-    margin-right: 10px;
-    position:absolute;
-    bottom:5%;
-    left:25%;
+@keyframes changeProfession {
+    0% { content: "Full Stack Developer"; }
+    33% { content: "App Developer"; }
+    66% { content: "Ethical Hacker & Cyber Security"; }
+    100% { content: "Full Stack Developer"; }
+}
+
+.welcome-description {
+    font-size: 16px;
+    animation: changeProfession 2s infinite;
 }
 
 .social-icons #insta {
@@ -213,18 +209,51 @@ nav ul li a:hover {
 }
 
 .welcome-text {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .welcome-description {
-    font-size: 16px;
+    font-size: 22px;
 }
 
-footer {
+.page-section1 {
+    height: 1400px;
+    overflow: scroll;
+}
+.background{
+    height:750px;
+    background-color: rgb(240, 180, 174);;
+}
+
+.page-section2 {
+    height: 100vh;
+}  
+
+.page2contain{
+    height: 700px;
+}
+
+.left-side2 {
+    flex: 1;
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:750px;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+    width: 30%;
+}
+
+
+
+
+/* footer {
     background-color: #222;
     color: #fff;
     padding: 10px 0;
     text-align: center;
-}
+} */
