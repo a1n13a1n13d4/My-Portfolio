@@ -4,6 +4,71 @@
     box-sizing: border-box;
 }
 
+.all {
+  position: relative;
+  z-index: 1;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  }
+
+#cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+} 
+
+.right-side {
+  position: absolute;
+  top: 31%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width:450px;
+  padding: 20px;
+  background-color: black;
+  outline:5px solid red;
+  color: white;
+  display: none;
+  z-index: 2;
+}
+
+.right-side .welcome-text:hover{
+  color:lightgreen;
+}
+
+.visible {
+  display: block;
+}
+
+.container-below .right-side h2,
+.container-below .right-side p {
+  margin-top: 0;
+}
+
+.container-below .right-side p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.container-below .right-side p::before {
+  content: "Full Stack Developer";
+  animation: changeContent 12s infinite;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -15,6 +80,38 @@ body {
     padding: 20px;
 }
 
+.logo {
+    opacity: 0;
+    animation: fadeInLogo 0.5s 0.5s forwards;
+  }
+  
+  .portfolio-name {
+    opacity: 0;
+    animation: fadeInName 0.5s 1s forwards;
+  }
+  
+  .portfolio-name:hover {
+    color:lightgreen;
+  }
+
+  @keyframes fadeInLogo {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInName {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 a {
     text-decoration: none;
     color: #333;
@@ -46,7 +143,7 @@ header {
     background-color: #222;
     color: #fff;
     padding: 10px 0;
-    height: 150px;
+    height: 120px;
 }
 
 header:hover {
@@ -70,6 +167,29 @@ header h1 {
     font-size: 24px;
     font-weight: bold;
     margin-top: 5px;
+}
+
+.container-below{
+  height: 630px;
+  width:100%;
+}
+.all2{
+  height:630px;
+  width:50%;
+  position:relative;
+}
+
+.all2 #image2{
+  position:absolute;
+  bottom:50%;
+  left:75%;
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 nav ul {
@@ -108,39 +228,137 @@ nav ul li a:hover {
     color: lightgreen;
 }
 
-.container-below {
-    max-width: 90%;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(240, 180, 174);
-    position: relative;
+.navigation #button1{
+    opacity: 0;
+    animation: fadeInButton1 0.5s 1.5s forwards;
+}
+  
+@keyframes fadeInButton1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
-.left-side {
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin:0;
-    padding:0;
-    left:0;
+.navigation #button2{
+    opacity: 0;
+    animation: fadeInButton2 0.5s 2s forwards;
+  }
+  
+  @keyframes fadeInButton2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navigation #button3{
+    opacity: 0;
+    animation: fadeInButton3 0.5s 2.5s forwards;
+  }
+  
+  @keyframes fadeInButton3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navigation #button4{
+    opacity: 0;
+    animation: fadeInButton4 0.5s 3s forwards;
+  }
+  
+  @keyframes fadeInButton4 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navigation #button5{
+    opacity: 0;
+    animation: fadeInButton5 0.5s 3.5s forwards;
+  }
+  
+  @keyframes fadeInButton5 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeImages {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes changeProfession {
-    0% { content: "Full Stack Developer"; }
-    33% { content: "App Developer"; }
-    66% { content: "Ethical Hacker & Cyber Security"; }
-    100% { content: "Full Stack Developer"; }
+#image2 {
+  opacity: 0;
+  animation: fadeImages 5s ease-in forwards;
 }
 
-.welcome-description {
-    font-size: 16px;
-    animation: changeProfession 2s infinite;
+#image2 {
+  animation-delay: 5s;
+}
+
+#facebook {
+    opacity: 0;
+    animation: fadeImages 0.5s 5.5s ease-in forwards;
+}
+
+#twitter {
+    opacity: 0;
+    animation: fadeImages 0.5s 6s ease-in forwards;
+}
+
+#insta {
+    opacity: 0;
+    animation: fadeImages 0.5s 6.5s ease-in forwards;
+}
+
+#linkedin {
+    opacity: 0;
+    animation: fadeImages 0.5s 7s ease-in forwards;
+}
+
+#gmail {
+    opacity: 0;
+    animation: fadeImages 0.5s 7.5s ease-in forwards;
+}
+
+.social-icons #insta.show {
+  bottom: 2px;
+}
+
+.social-icons #twitter.show {
+  bottom: 2px;
+}
+
+.social-icons #facebook.show {
+  bottom: 2px;
+}
+
+.social-icons #linkedin.show {
+  bottom: 2px;
+}
+
+.social-icons #gmail.show {
+  bottom: 2px;
 }
 
 .social-icons #insta {
@@ -153,12 +371,14 @@ nav ul li a:hover {
     line-height: 40px;
     color: #fff;
     position:absolute;
-    top:55%;
-    left:25%;
+    bottom:40%;
+    left:70%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
 }
 
 .social-icons #twitter{
-    display: flex;
+   display: flex;
     width: 40px;
     height: 40px;
     background-color: #333;
@@ -167,8 +387,10 @@ nav ul li a:hover {
     line-height: 40px;
     color: #fff;
     position:absolute;
-    top:55%;
-    left:35%;
+    bottom:40%;
+    left:80%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
 }
 
 .social-icons #facebook{
@@ -181,8 +403,10 @@ nav ul li a:hover {
     line-height: 40px;
     color: #fff;
     position:absolute;
-    top:55%;
-    left:45%;
+    bottom:40%;
+    left:90%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
 }
 
 .social-icons #linkedin {
@@ -195,40 +419,56 @@ nav ul li a:hover {
     line-height: 40px;
     color: #fff;
     position:absolute;
-    top:55%;
-    left:55%;
+    bottom:40%;
+    left:100%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
 }
 
-.right-side {
-    flex: 1;
+.social-icons #gmail{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    bottom:40%;
+    left:110%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease;
 }
+
 
 .welcome-text {
     font-size: 34px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
+    font-family: "Papyrus", sans-serif;
 }
 
-.welcome-description {
+#welcome-description2{
+    opacity: 0;
+    animation:fadeImages 0.5s 9s ease-in forwards;
+}
+
+#welcome-description,#welcome-description2 {
     font-size: 22px;
 }
 
 .page-section1 {
-    height: 1400px;
-    overflow: scroll;
+    height:1000px;
+    overflow: hidden;
 }
+
 .background{
     height:750px;
-    background-color: rgb(240, 180, 174);;
 }
 
 .page-section2 {
-    height: 100vh;
+    height: 90vh;
 }  
 
 .page2contain{
@@ -248,8 +488,257 @@ nav ul li a:hover {
     width: 30%;
 }
 
+.social-icons2 #insta {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:45%;
+    left:25%;
+}
 
+.social-icons2 #twitter{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:45%;
+    left:38%;
+}
 
+.social-icons2 #facebook{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:45%;
+    left:51%;
+}
+
+.social-icons2 #linkedin {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:45%;
+    left:63%;
+}
+
+.social-icons2 #gmail{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+    position:absolute;
+    top:45%;
+    left:76%;
+}
+
+.divisions #buttons1 {
+    font-size: 18px;
+    bottom:280px;
+    right:0;
+    background-color:black;
+    position:absolute;
+    color:white;
+    height:40px;
+    text-align:center;
+    width:100%;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+#buttons1:hover {
+    color: red;
+}
+
+#buttons1:active {
+    border: 2px solid white;
+    color:red;
+    font-size: 16px;
+}
+
+.divisions #buttons2 {
+    font-size: 18px;
+    bottom:210px;
+    right:0;
+    background-color:black;
+    position:absolute;
+    color:white;
+    height:40px;
+    text-align:center;
+    width:100%;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+#buttons2:hover {
+    color: red;
+}
+
+#buttons2:active {
+    border: 2px solid white;
+    color:red;
+    font-size: 16px;
+}
+
+.divisions #buttons3 {
+    font-size: 18px;
+    bottom:140px;
+    right:0;
+    background-color:black;
+    position:absolute;
+    color:white;
+    height:40px;
+    text-align:center;
+    width:100%;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+#buttons3:hover {
+    color: red;
+}
+
+#buttons3:active {
+    border: 2px solid white;
+    color:red;
+    font-size: 16px;
+}
+
+.divisions #buttons4 {
+    font-size: 18px;
+    bottom:70px;
+    right:0;
+    background-color:black;
+    position:absolute;
+    color:white;
+    height:40px;
+    text-align:center;
+    width:100%;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+#buttons4:hover {
+    color: red;
+}
+
+#buttons4:active {
+    border: 2px solid white;
+    color:red;
+    font-size: 16px;
+}
+
+.divisions #buttons5 {
+    font-size: 18px;
+    bottom:0;
+    right:0;
+    background-color:black;
+    position:absolute;
+    color:white;
+    height:40px;
+    text-align:center;
+    width:100%;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+#buttons5:hover {
+    color: red;
+}
+
+#buttons5:active {
+    border: 2px solid white;
+    color:red;
+    font-size: 16px;
+}
+
+.welcome-description:hover {
+  color: lightgreen;
+}
+
+.welcome-description2:hover {
+    color: red;
+}
+
+.left-side2 h1:hover,
+.left-side2 p:hover {
+    color: red;
+}
+
+.welcome-description::before{
+  font-family: "Brush Script MT", cursive;
+  content: "Full Stack Developer";
+  animation: changeContent 12s infinite;
+}
+.welcome-description2::before {
+  content: "Full Stack Developer";
+  animation: changeContent 12s infinite;
+}
+
+@keyframes changeContent {
+  0%, 8.33% {
+    content: "Full Stack Developer";
+  }
+  8.34%, 16.66% {
+    content: "App Developer";
+  }
+  16.67%, 25% {
+    content: "Ethical Hacker and Cybersecurity";
+  }
+  25.01%, 33.33% {
+    content: "Full Stack Developer";
+  }
+  33.34%, 41.66% {
+    content: "App Developer";
+  }
+  41.67%, 50% {
+    content: "Ethical Hacker and Cybersecurity";
+  }
+  50.01%, 58.33% {
+    content: "Full Stack Developer";
+  }
+  58.34%, 66.66% {
+    content: "App Developer";
+  }
+  66.67%, 75% {
+    content: "Ethical Hacker and Cybersecurity";
+  }
+  75.01%, 83.33% {
+    content: "Full Stack Developer";
+  }
+  83.34%, 91.66% {
+    content: "App Developer";
+  }
+  91.67%, 100% {
+    content: "Ethical Hacker and Cybersecurity";
+  }
+}
 
 /* footer {
     background-color: #222;
