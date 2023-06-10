@@ -4,69 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="A:\extra studies\Project and project keywords\PORTFOLIO\CSS\index.css">
-    <link rel="shortcut icon" href="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\LOGO.jpeg" type="3/jpg" alt="logo">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="shortcut icon" href="IMAGES/LOGO.jpeg" type="image/jpeg" alt="logo">
 </head>
 <body>
- <div class="all">
+ <div class="all">  
+  <div id="particles-js"></div>
+<div id="cursor"></div>
   <div class="background">
-    <div class="page-section1">
+    <div class="page-section1" id="Home">
         <header>
             <div class="container">
                 <div class="header-content">
-                    <img src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\logo2.jpg" alt="logo">
-                    <h1>ANAND PORTFOLIO</h1>
+                    <img src="IMAGES/logo2.jpg" alt="logo" class="logo">
+                    <h1 class="portfolio-name">ANAND PORTFOLIO</h1>
                 </div>
-                <nav>
+                <nav  class="navigation">
                     <ul>
-                        <li><a href="#" id="button1">Home</a></li>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Skills and Certificates</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#Home" id="button1">Home</a></li>
+                        <li><a href="#About" id="button2">About Me</a></li>
+                        <li><a href="#" id="button3">Education</a></li>
+                        <li><a href="#" id="button4">Skills and Certificates</a></li>
+                        <li><a href="#" id="button5">Projects</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <div class="container-below">
-            <div class="left-side">
-
-                <img id="image1" style=" width:100%; height:600px; margin:0; padding:0;" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\index1.png">
-                <img id="image2" style="width: 200px; 
-                height: 200px;
-                border-radius: 50%;
-                background-size: cover;
-                margin-right: 10px;
-                position:absolute;
-                bottom:50%;
-                left:25%;" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\My Image.jpeg" alt="ANAND">
+         <div class="container-below"  > 
+            <div class="all2">
+                <img id="image2" src="IMAGES/My Image.jpeg" alt="ANAND">
                 <div class="social-icons">
-                    <a href="#"><img id="facebook" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\facebook.jpg" alt="Facebook"></a>
-                    <a href="#"><img id="twitter" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\twitter.jpg" alt="Twitter"></a>
-                    <a href="#"><img id="insta" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\Instagram.jpg" alt="Instagram"></a>
-                    <a href="#"><img id="linkedin" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\linkedin.jpg" alt="LinkedIn"></a>
+                    <a href="#"><img id="facebook" src="IMAGES/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img id="twitter" src="IMAGES/twitter.jpg" alt="Twitter"></a> 
+                    <a href="#"><img id="insta" src="IMAGES/Instagram.jpg" alt="Instagram"></a>
+                    <a href="#"><img id="linkedin" src="IMAGES/linkedin.jpg" alt="LinkedIn"></a>
+                    <a href="#"><img id="gmail" src="IMAGES/gmail.jpg" alt="gmail"></a> 
                 </div>
             </div>
             <div class="right-side">
-                <h2 class="welcome-text" style="font-family: Copperplate Gothic Light, Arial, sans-serif;">HELLO, I AM ANAND</h2>
-                <p class="welcome-description">Full Stack Developer</p>
+                <h2 class="welcome-text" id="welcome-text" style="font-family: Copperplate Gothic Light, Arial, sans-serif;">Hello, I'm Anand</h2>
+                <p class="welcome-description" id="welcome-description"></p>
             </div>                
         </div>
     </div>
-        <div style="height: 5px; width:100%; background-color:rgb(240, 180, 174);" class="space"></div>
     </div>
     <div class="page-section2">
      <div class="page2contain"> 
-        <div class="left-side2">
+        <div class="left-side2" style="position: relative;" id="About">
             <img id="image3" style="width: 150px; 
                 height: 150px;
                 border-radius: 50%;
                 background-size: cover;
-                margin-right: 10px;" src="A:\extra studies\Project and project keywords\PORTFOLIO\IMAGES\My Image.jpeg" alt="ANAND">                   
-            
+                margin-right: 10px;
+                position: absolute; bottom: 520px; left:2.5;" src="IMAGES/My Image.jpeg" alt="ANAND">
+                <h1 style="color:white; text-align: center; position: absolute; left:3; top:240px; font-family: Papyrus;">S.ANAND</h1>
+                <p style="color: white; text-align: center; position: absolute; left:3; top:285px; color:white; font-family: Brush Script MT;" class="welcome-description2" id="welcome-description2"></p>
+             <div class="social-icons2">
+                <a href="#"><img id="facebook" src="IMAGES/facebook.jpg" alt="Facebook"></a>
+                <a href="#"><img id="twitter" src="IMAGES/twitter.jpg" alt="Twitter"></a>
+                <a href="#"><img id="insta" src="IMAGES/Instagram.jpg" alt="Instagram"></a>
+                <a href="#"><img id="linkedin" src="IMAGES/linkedin.jpg" alt="LinkedIn"></a>
+                <a href="#"><img id="gmail" src="IMAGES/gmail.jpg" alt="gmail"></a>
+            </div>   
+            <div class="divisions">
+                <a href="#Home" id="buttons1"><b>HOME</b></a>
+                <a href="#About" id="buttons2"><b>ABOUT ME</a></b>
+                <a href="#" id="buttons3"><b>EDUCATION</a></b>
+                <a href="#" id="buttons4"><b>SKILLS & CERTIFICATES</a></b>
+                <a href="#" id="buttons5"><b>PROJECTS</a></b>
+            </div>            
         </div>
-         <div class="right-side2"></div>
+         <div class="right-side2">
+
+         </div>
      </div>
         <div class="page-section3">
             <!-- Content for Page 3 -->
@@ -76,6 +87,158 @@
                 <p>&copy; 2023 My Portfolio. All rights reserved.</p>
             </div>
         </footer> -->
-     </div>
+<style>
+
+</style>
+<script>
+var cursor = document.getElementById('cursor');
+
+document.addEventListener('mousemove', function(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+
+  cursor.style.left = x + 'px';
+  cursor.style.top = y + 'px';
+});</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 150,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": true,
+          "distance": 200,
+          "speed":1,
+          "duration": 0.4,
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true
+        },
+        "resize": true
+      },"mousemove": {
+        "enable": true,
+        "mode": "repulse" 
+      },
+      "modes": {
+        "grab": {
+          "distance": 250,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+</script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+  var image = document.getElementById('image2');
+  var content = document.querySelector('.right-side');
+  var socialIcons = document.querySelectorAll('.social-icons img');
+
+  image.addEventListener('click', function () {
+    content.classList.toggle('visible');
+    socialIcons.forEach(icon => icon.classList.toggle('show'));
+    image.style.transform = content.classList.contains('visible') ? 'translateX(-100px)' : 'none';
+  });
+});
+</script>
+</div>
 </body>
 </html>
