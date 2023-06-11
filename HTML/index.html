@@ -6,6 +6,13 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="shortcut icon" href="IMAGES/LOGO.jpeg" type="image/jpeg" alt="logo">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,400;1,800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair:ital,wght@1,400;1,800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Playfair:ital,wght@1,400;1,800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Kaushan+Script&family=Orbitron:wght@600&family=Playfair:ital,wght@1,400;1,800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Kaushan+Script&family=Mr+Dafoe&family=Orbitron:wght@600&family=Playfair:ital,wght@1,400;1,800&display=swap');
+    </style>
 </head>
 <body>
  <div class="all">  
@@ -58,8 +65,8 @@
                 background-size: cover;
                 margin-right: 10px;
                 position: absolute; bottom: 520px; left:2.5;" src="IMAGES/My Image.jpeg" alt="ANAND">
-                <h1 style="color:white; text-align: center; position: absolute; left:3; top:240px; font-family: Papyrus;">S.ANAND</h1>
-                <p style="color: white; text-align: center; position: absolute; left:3; top:285px; color:white; font-family: Brush Script MT;" class="welcome-description2" id="welcome-description2"></p>
+                <h1 class="hover-effect">S.ANAND</h1>
+                <p class="welcome-description2" id="welcome-description2"></p>
              <div class="social-icons2">
                 <a href="#"><img id="facebook" src="IMAGES/facebook.jpg" alt="Facebook"></a>
                 <a href="#"><img id="twitter" src="IMAGES/twitter.jpg" alt="Twitter"></a>
@@ -68,15 +75,46 @@
                 <a href="#"><img id="gmail" src="IMAGES/gmail.jpg" alt="gmail"></a>
             </div>   
             <div class="divisions">
-                <a href="#Home" id="buttons1"><b>HOME</b></a>
-                <a href="#About" id="buttons2"><b>ABOUT ME</a></b>
-                <a href="#" id="buttons3"><b>EDUCATION</a></b>
-                <a href="#" id="buttons4"><b>SKILLS & CERTIFICATES</a></b>
-                <a href="#" id="buttons5"><b>PROJECTS</a></b>
-            </div>            
+              <a href="#Home" id="buttons1">
+                <b><span class="symbol">&#127968;</span> HOME</b>
+              </a>
+              <a href="#About" id="buttons2">
+                <b><span class="symbol">&#128101;</span> ABOUT ME</b>
+              </a>
+              <a href="#" id="buttons3">
+                <b><span class="symbol">&#127891;</span> EDUCATION</b>
+              </a>
+              <a href="#" id="buttons4">
+                <b><span class="symbol">&#128640;</span> SKILLS & CERTIFICATES</b>
+              </a>
+              <a href="#" id="buttons5">
+                <b><span class="symbol">&#128187;</span> PROJECTS</b>
+              </a>
+            </div>                       
         </div>
          <div class="right-side2">
-
+                <h1 class="hover-effect2">About Me</h1>
+                <p>
+                  <span class="symbol">&#128100;</span> <code id="symbol1">Hi, I'm Anand. </code>
+                  <br><br>
+                  <span class="symbol">&#128269;</span> <code id="symbol2">I am studying B.Sc Computer Science  at Loyola College, Mettala. </code>
+                  <br><br>
+                  <span class="symbol">&#127758;</span> <code id="symbol3">I am a full stack developer and app developer.</code>
+                  <br><br>
+                  <span class="symbol">&#128273;</span> <code id="symbol4">I am also an ethical hacker with a focus on cybersecurity.</code>
+                  <br><br>
+                  <span class="symbol">&#128218;</span> <code id="symbol5">I have completed my high school at VHN Higher Secondary School.</code>
+                  <br><br>
+                  <span class="symbol">&#128197;</span> <code id="symbol6">I have completed type writing junior.</code>
+                  <br><br>
+                  <span class="symbol">&#127939;</span> <code id="symbol7">I am a Master in Silambam, a traditional Indian martial art.</code>
+                  <br><br>
+                  <span class="symbol">&#128218;</span> <code id="symbol8">I completed Dakshin Bharath Hindi Prachar Sabha conducting 8 Hindi exams.</code>
+                  <br><br>
+                  <span class="symbol">&#128105;</span> <code id="symbol9">I have an account in Freelancer, but I am a beginner only.</code>
+                  <br><br>
+                  <span class="symbol">&#128187;</span> <code id="symbol10">I have done a college quiz & ERP project.</code>
+                </p>
          </div>
      </div>
         <div class="page-section3">
@@ -87,19 +125,7 @@
                 <p>&copy; 2023 My Portfolio. All rights reserved.</p>
             </div>
         </footer> -->
-<style>
-
-</style>
-<script>
-var cursor = document.getElementById('cursor');
-
-document.addEventListener('mousemove', function(event) {
-  var x = event.clientX;
-  var y = event.clientY;
-
-  cursor.style.left = x + 'px';
-  cursor.style.top = y + 'px';
-});</script>
+<script src="JAVASCRIPT/index.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
   particlesJS('particles-js',
@@ -227,17 +253,7 @@ document.addEventListener('mousemove', function(event) {
 );
 </script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-  var image = document.getElementById('image2');
-  var content = document.querySelector('.right-side');
-  var socialIcons = document.querySelectorAll('.social-icons img');
-
-  image.addEventListener('click', function () {
-    content.classList.toggle('visible');
-    socialIcons.forEach(icon => icon.classList.toggle('show'));
-    image.style.transform = content.classList.contains('visible') ? 'translateX(-100px)' : 'none';
-  });
-});
+ 
 </script>
 </div>
 </body>
