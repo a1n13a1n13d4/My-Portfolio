@@ -6,6 +6,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="shortcut icon" href="IMAGES/LOGO.jpeg" type="image/jpeg" alt="logo">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,400;1,800&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair:ital,wght@1,400;1,800&display=swap');
@@ -15,7 +17,7 @@
     </style>
 </head>
 <body>
- <div class="all">  
+ <div id="all">  
   <div id="particles-js"></div>
 <div id="cursor"></div>
   <div class="background">
@@ -37,8 +39,7 @@
                 </nav>
             </div>
         </header>
-
-         <div class="container-below"  > 
+         <div class="container-below"> 
             <div class="all2">
                 <img id="image2" src="IMAGES/My Image.jpeg" alt="ANAND">
                 <div class="social-icons">
@@ -55,16 +56,11 @@
             </div>                
         </div>
     </div>
-    </div>
-    <div class="page-section2">
+  </div>
+  <div class="page-section2">
      <div class="page2contain"> 
-        <div class="left-side2" style="position: relative;" id="About">
-            <img id="image3" style="width: 150px; 
-                height: 150px;
-                border-radius: 50%;
-                background-size: cover;
-                margin-right: 10px;
-                position: absolute; bottom: 520px; left:2.5;" src="IMAGES/My Image.jpeg" alt="ANAND">
+        <div class="left-side2" data-aos="fade-right" style="position: relative;">
+            <img id="image3" src="IMAGES/My Image.jpeg" alt="ANAND">
                 <h1 class="hover-effect">S.ANAND</h1>
                 <p class="welcome-description2" id="welcome-description2"></p>
              <div class="social-icons2">
@@ -92,8 +88,8 @@
               </a>
             </div>                       
         </div>
-         <div class="right-side2">
-                <h1 class="hover-effect2">About Me</h1>
+         <div class="right-side2" data-aos="zoom-in">
+                <h1 class="hover-effect2"  id="About">About Me</h1>
                 <p>
                   <span class="symbol">&#128100;</span> <code id="symbol1">Hi, I'm Anand. </code>
                   <br><br>
@@ -111,20 +107,23 @@
                   <br><br>
                   <span class="symbol">&#128218;</span> <code id="symbol8">I completed Dakshin Bharath Hindi Prachar Sabha conducting 8 Hindi exams.</code>
                   <br><br>
-                  <span class="symbol">&#128105;</span> <code id="symbol9">I have an account in Freelancer, but I am a beginner only.</code>
+                  <span class="symbol">&#128105;</span> <code id="symbol9">I am a Freelancer, but I am a beginner only.</code>
                   <br><br>
-                  <span class="symbol">&#128187;</span> <code id="symbol10">I have done a college quiz & ERP project.</code>
+                  <span class="symbol">&#128187;</span> <code id="symbol10">I have done a college website quiz & ERP software project.</code>
                 </p>
          </div>
      </div>
-        <div class="page-section3">
-            <!-- Content for Page 3 -->
+    </div>
+    <div class="page-section3">
+      <footer>
+        <div class="footer-content">
+          <div class="copyright">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <p>Contact me at <a href="mailto:sanand03072005@gmail.com">sanand03072005@gmail.com</a></p>
+          </div>
         </div>
-        <!-- <footer>
-            <div class="container">
-                <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-            </div>
-        </footer> -->
+      </footer> 
+    </div>    
 <script src="JAVASCRIPT/index.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
@@ -253,7 +252,7 @@
 );
 </script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
- 
+  AOS.init();
 </script>
 </div>
 </body>
