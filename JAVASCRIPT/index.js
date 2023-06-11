@@ -27,3 +27,6 @@ window.addEventListener('scroll', function() {
     content.classList.add('slide');
   }
 });
+
+
+
