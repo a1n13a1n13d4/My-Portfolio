@@ -9,6 +9,37 @@
   z-index: 1;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  color: #FF9800;
+}
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -93,6 +124,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
+    cursor: url('IMAGES/cursor dot.png'), auto;
 }
 
 .container {
