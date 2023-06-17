@@ -28,15 +28,21 @@
                     <img src="IMAGES/logo2.jpg" alt="logo" class="logo">
                     <h1 class="portfolio-name">ANAND PORTFOLIO</h1>
                 </div>
-                <nav  class="navigation">
-                    <ul>
-                        <li><a href="#Home" id="button1">Home</a></li>
-                        <li><a href="#About" id="button2">About Me</a></li>
-                        <li><a href="#" id="button3">Education</a></li>
-                        <li><a href="#" id="button4">Skills and Certificates</a></li>
-                        <li><a href="#" id="button5">Projects</a></li>
-                    </ul>
-                </nav>
+                <nav class="navigation">
+                  <ul>
+                    <li><a href="#Home" id="button1">Home</a></li>
+                    <li><a href="#About" id="button2">About Me</a></li>
+                    <li><a href="education.html" id="button3">Education</a></li>
+                    <li class="dropdown">
+                      <a href="#" id="button4">Skills and Certificates</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="Skills & Certificates.html">Skills</a></li>
+                        <li><a href="">Certificates</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" id="button5">Projects</a></li>
+                  </ul>
+                </nav>                
             </div>
         </header>
          <div class="container-below"> 
@@ -59,7 +65,7 @@
   </div>
   <div class="page-section2">
      <div class="page2contain"> 
-        <div class="left-side2" data-aos="fade-right" style="position: relative;">
+        <div class="left-side2"   id="About" data-aos="fade-right" style="position: relative;">
             <img id="image3" src="IMAGES/My Image.jpeg" alt="ANAND">
                 <h1 class="hover-effect">S.ANAND</h1>
                 <p class="welcome-description2" id="welcome-description2"></p>
@@ -77,10 +83,10 @@
               <a href="#About" id="buttons2">
                 <b><span class="symbol">&#128101;</span> ABOUT ME</b>
               </a>
-              <a href="#" id="buttons3">
+              <a href="education.html" id="buttons3">
                 <b><span class="symbol">&#127891;</span> EDUCATION</b>
               </a>
-              <a href="#" id="buttons4">
+              <a href="Skills & Certificates.html" id="buttons4">
                 <b><span class="symbol">&#128640;</span> SKILLS & CERTIFICATES</b>
               </a>
               <a href="#" id="buttons5">
@@ -89,7 +95,7 @@
             </div>                       
         </div>
          <div class="right-side2" data-aos="zoom-in">
-                <h1 class="hover-effect2"  id="About">About Me</h1>
+                <h1 class="hover-effect2">About Me</h1>
                 <p>
                   <span class="symbol">&#128100;</span> <code id="symbol1">Hi, I'm Anand. </code>
                   <br><br>
