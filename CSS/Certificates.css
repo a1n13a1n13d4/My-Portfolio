@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    background-color: #3399ff;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    transition: height 0.5s;
+}
+
+.container:hover {
+    height: 70px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #0f0, #000);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 1;
+    transition: 1.5s;
+}
+
+section span:hover {
+    background: #0f0;
+    transition: 0s;
+}
+
+@media (max-width: 900px) {
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+
+@media (max-width: 600px) {
+    section span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.logo:active {
+    border: 3px solid black;
+}
+
+.portfolio-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.portfolio-name:hover {
+    opacity: 0.7;
+}
+
+.portfolio-name:active {
+    color: red;
+    font-family: 'Courgette', cursive;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.navigation li a:hover {
+    color: #000000;
+}
+
+.navigation ul li {
+    margin-right: 10px;
+}
+
+.navigation ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.navigation ul li a:hover {
+    background-color: white;
+    color: #3399ff;
+}
+
+.navigation ul li a:active {
+    text-decoration: underline;
+}
+
+.content h2{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.content h2:hover{
+    opacity:0.8;
+}
+
+.content h2:active{
+    opacity:0.9;
+}
+
+.content #fullstack{
+    height:300px;
+    width:400px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+
+.certificate1:hover{
+    transform:scale(0.9);
+    opacity:0.8;
+}
+
+.certificate1:active{
+    transform:scale(0.8);
+}
+
+.certificate1 h3{
+   font-size: 30px;
+   color:blue;
+   margin-left: 125px;
+   font-family: 'Bebas Neue', sans-serif;
+}
+
+.certificate1{
+    width:500px;
+}
