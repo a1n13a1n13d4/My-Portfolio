@@ -1,947 +1,394 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --background-color: #343a40; 
+    --text-color: #ffffff; 
+    --button-hover-color: #ccc; 
 }
 
-#all {
-  position: relative;
-  z-index: 1;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li {
-  margin-bottom: 5px;
-}
-
-.dropdown-menu a {
-  display: block;
-  color: #333;
-}
-
-.dropdown-menu a:hover {
-  color: #FF9800;
-}
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  }
-
-#cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-} 
-
-.right-side {
-  position: absolute;
-  top: 21%;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  width:450px;
-  padding: 20px;
-  background-color: black;
-  outline:5px solid red;
-  color: white;
-  display: none;
-  z-index: 2;
-}
-
-.right-side .welcome-text:hover{
-  color:lightgreen;
-}
-
-.right-side .welcome-text:active{
-  color:lightgreen;
-  text-decoration: underline;
-}
-
-.right-side2 {
-  position: relative;
-}
-
-.page2contain{
-  position:relative;
-}
-.right-side2{
-  position: absolute;
-  width:70%;
-  height:800px;
-  background-color: black;
-  bottom:-14.3%;
-  right:0;
-}
-
-.visible {
-  display: block;
-}
-
-.container-below .right-side h2,
-.container-below .right-side p {
-  margin-top: 0;
-}
-
-.container-below .right-side p {
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.container-below .right-side p::before {
-  content: "Full Stack Developer";
-  animation: changeContent 12s infinite;
+.dark-mode {
+    --background-color: #111;
+    --text-color: #fff;
+    --button-hover-color: black;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    cursor: url('IMAGES/cursor dot.png'), auto;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.logo {
-    opacity: 0;
-    animation: fadeInLogo 0.5s 0.5s forwards;
-  }
-  
-  .portfolio-name {
-    opacity: 0;
-    animation: fadeInName 0.5s 1s forwards;
-  }
-  
-  .portfolio-name:hover {
-    color:lightgreen;
-    font-family: 'Josefin Slab', serif;
-  }
-
-  .portfolio-name:active {
-    color:red;
-    text-decoration: underline;
-  }
-
-  @keyframes fadeInLogo {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInName {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a#button1 {
-    background-color: transparent;  
-    position: relative;
-    color: lightgreen;
-}
-
-a#button1::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: lightgreen; 
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-a#button1:hover::after {
-    opacity: 1;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #222;
-    color: #fff;
-    padding: 10px 0;
-    height: 120px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
 
-header:hover {
-    height: 180px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-}
-
-.header-content img {
-    width: 50px; 
-    height: 50px;
+#header-left img {
+    width: 60px;
     border-radius: 50%;
-    background-size: cover;
     margin-right: 10px;
 }
 
-.header-content img:hover{
-  transform: scale(1.1);
-}
-
-.header-content img:active{
-  transform: scale(0.8);
-}
-
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-.container-below{
-  height: 630px;
-  width:100%;
-}
-.all2{
-  height:630px;
-  width:50%;
-  position:relative;
-}
-
-.all2 #image2{
-  position:absolute;
-  bottom:50%;
-  left:75%;
-  width: 200px; 
-  height: 200px;
-  border-radius: 50%;
-  background-size: cover;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.all2 #image2:hover{
-  filter: brightness(80%);
-}
-
-.all2 #image2:active{
-  filter: brightness(70%);
-}
-
-nav ul {
+#header-right ul {
     list-style: none;
+    display: flex;
 }
 
-nav ul li {
-    display: inline;
+#header-right li {
+    margin-right: 15px;
 }
 
-nav ul li a {
-    margin-left: 15px;
+#header-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
-nav ul li a {
+#header-right a:hover {
+    color: #ccc;
+}
+
+.smaller-font {
+    font-size: 22px;
+}
+
+/* Header styles */
+header {
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    height:125px; 
+}
+
+header h1:hover{
+    font-size: large;
+}
+
+header h1:active{
+    font-style: italic;
+}
+
+header img:hover {
+    transform: scale(1.1); 
+}
+
+header img:active{
+    transform:scale(0.8);
+}
+
+#header-right a:hover {
+    color: #ccc;
+}
+
+#header-right a:active {
+    text-decoration: underline;
+}
+
+.smaller-font {
+    font-size: 22px;
+}
+
+/* Black and White Mode button */
+.black-and-white {
+    filter: grayscale(100%);
+}
+
+/* Add styles for dark mode here */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Styles for the toggle switch */
+.toggle-switch {
     position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    overflow: hidden;
 }
 
-nav ul li a::after {
-    content: "";
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
     position: absolute;
-    bottom: -2px;
+    cursor: pointer;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: lightgreen;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    transition: background-color 0.4s;
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
 }
 
-nav ul li a:hover::after {
-    opacity: 1;
-}
-
-nav ul li a:hover {
-    color: lightgreen;
-}
-
-.navigation #button1{
-    opacity: 0;
-    animation: fadeInButton1 0.5s 1.5s forwards;
+.slider:before {
+    content: '🌞'; /* Sun emoji */
 }
   
-@keyframes fadeInButton1 {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+input:checked + .slider:before {
+    content: '🌜'; /* Moon emoji */
+    font-size: 18px;
 }
 
-.navigation #button2{
-    opacity: 0;
-    animation: fadeInButton2 0.5s 2s forwards;
-  }
-  
-  @keyframes fadeInButton2 {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
 
-  .navigation #button3{
-    opacity: 0;
-    animation: fadeInButton3 0.5s 2.5s forwards;
-  }
-  
-  @keyframes fadeInButton3 {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.slider.round:before {
+    border-radius: 50%;
+}
 
-  .navigation #button4{
-    opacity: 0;
-    animation: fadeInButton4 0.5s 3s forwards;
-  }
-  
-  @keyframes fadeInButton4 {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.container-below {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-  .navigation #button5{
-    opacity: 0;
-    animation: fadeInButton5 0.5s 3.5s forwards;
-  }
-  
-  @keyframes fadeInButton5 {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.all2 {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
 
-@keyframes fadeImages {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.social-icons a {
+    margin-right: 10px;
+}
+
+.right-side {
+    text-align: center;
+}
+
+.welcome-text {
+    font-family: 'Copperplate Gothic Light', Arial, sans-serif;
 }
 
 #image2 {
-  opacity: 0;
-  animation: fadeImages 5s ease-in forwards;
+    height: 250px; 
+    width:250px;
+    border-radius: 50%;
 }
 
-#image2 {
-  animation-delay: 5s;
-}
-
-#facebook {
-    opacity: 0;
-    animation: fadeImages 0.5s 5.5s ease-in forwards;
+/* Social Icons Styles */    
+.social-icons #facebook {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: bottom 0.3s ease;
 }
 
 #twitter {
-    opacity: 0;
-    animation: fadeImages 0.5s 6s ease-in forwards;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: bottom 0.3s ease;
 }
 
 #insta {
-    opacity: 0;
-    animation: fadeImages 0.5s 6.5s ease-in forwards;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: bottom 0.3s ease;
 }
 
 #linkedin {
-    opacity: 0;
-    animation: fadeImages 0.5s 7s ease-in forwards;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: bottom 0.3s ease;
 }
 
 #gmail {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: bottom 0.3s ease;
+}
+
+/* Additional styles for animation */
+.fade-in {
     opacity: 0;
-    animation: fadeImages 0.5s 7.5s ease-in forwards;
+    transition: opacity 1s ease-in-out;
 }
 
-.social-icons #insta.show {
-  bottom: 2px;
+.fade-in.delay-1 {
+    transition-delay: 0.5s;
 }
 
-.social-icons #twitter.show {
-  bottom: 2px;
+.fade-in.delay-2 {
+    transition-delay: 1s;
 }
 
-.social-icons #facebook.show {
-  bottom: 2px;
+.fade-in.delay-3 {
+    transition-delay: 1.5s;
 }
 
-.social-icons #linkedin.show {
-  bottom: 2px;
+.fade-in.delay-4 {
+    transition-delay: 2s;
 }
 
-.social-icons #gmail.show {
-  bottom: 2px;
+.fade-in.delay-5 {
+    transition-delay: 2.5s;
 }
 
-.social-icons #insta {
-    display: flex;
-    width: 40px;
-    height: 40px;
+.fade-in.delay-6 {
+    transition-delay: 3s;
+}
+
+.fade-in.delay-7 {
+    transition-delay: 3.5s;
+}
+
+.fade-in.delay-8 {
+    transition-delay: 4s;
+}
+
+.fade-in.delay-9 {
+    transition-delay: 4.5s;
+}
+
+.fade-in.delay-10 {
+    transition-delay: 3s;
+}
+
+.fade-in.delay-11 {
+    transition-delay: 2.5s;
+}
+
+.fade-in.delay-12 {
+    transition-delay: 3s;
+}
+
+.fade-in.delay-13 {
+    transition-delay: 2.5s;
+}
+
+.fade-in.delay-14 {
+    transition-delay: 2s;
+}
+
+.fade-in.delay-15 {
+    transition-delay: 5s;
+}
+
+/* Footer styles */
+footer {
     background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    bottom:40%;
-    left:70%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.social-icons #twitter{
-   display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    bottom:40%;
-    left:80%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease;
+footer a {
+    color: white; 
+    text-decoration: none;
 }
 
-.social-icons #facebook{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    bottom:40%;
-    left:90%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease;
+/* Welcome Container */
+
+.right-side {
+    position: absolute;
+    top: 39%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 550px;
+    height: 250px;
+    padding: 20px;
+    background-color: black;
+    outline: 5px solid red;
+    color: white;
+    display: none;
+    z-index: 1;
 }
 
-.social-icons #linkedin {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    bottom:40%;
-    left:100%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease;
+.right-side .welcome-text:hover,#welcome-description:hover { 
+    transform: scale(1.1); 
 }
 
-.social-icons #gmail{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    bottom:40%;
-    left:110%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease;
+.right-side .welcome-text:active,#welcome-description:active { 
+    transform: scale(0.8); 
 }
-
 
 .welcome-text {
     font-size: 34px;
     font-weight: bold;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     font-family: "Papyrus", sans-serif;
+    text-align: right;
 }
 
-#welcome-description2{
-    opacity: 0;
-    animation:fadeImages 0.5s 9s ease-in forwards;
-}
-
-#welcome-description,#welcome-description2 {
+#welcome-description{
     font-size: 22px;
+    text-align: right;
 }
 
-#welcome-description:hover {
-  color: lightgreen;
+.visible {
+    transform: translateX(-100px);
 }
 
-#welcome-description:active{
-  color: lightgreen;
-  text-decoration: underline;
+.social-icons img.show {
+    transform: translateY(20px);
 }
 
-.page-section1 {
-    height:1000px;
-    overflow: hidden;
+.content.slide {
+    transform: translateY(0);
 }
 
-.background{
-    height:750px;
+.all2 img {
+    position: relative; 
+    z-index: 2; 
 }
 
-.page-section2 {
-    height: 90vh;
-}  
-
-.page2contain{
-    height: 700px;
+.welcome-text,
+.welcome-description {
+    position: relative; 
+    z-index: 2; 
 }
 
-#image3{width: 150px; 
-height: 150px;
-border-radius: 50%;
-background-size: cover;
-margin-right: 10px;
-position: absolute; bottom: 520px; left:2.5;
+.social-icons {
+    position: relative; 
+    z-index: 2; 
 }
 
-#image3:hover{
-  filter: brightness(80%);
+.content.slide {
+    transform: translateY(0);
+    z-index: 2; 
 }
 
-#image3:active{
-  filter: brightness(70%);
-}
-
-.left-side2 {
-    flex: 1;
-    display: flex;
-    position:relative;
-    flex-direction: column;
-    justify-content: flex-start;
-    height:800px;
-    align-items: center;
-    position: relative;
-    background-color: black;
-    border:5px solid white;
-    width: 30%;
-    flex-direction: column;
-}
-
-.left-side2 h1{
-  color:white; 
-  text-align: center;
-  position: absolute; 
-  left:3; 
-  top:240px; 
-  font-family: 'Playfair', serif;
-}
-
-.left-side2 p{
-  color: white; 
-  text-align: center; 
-  position: absolute; 
-  left:3; top:285px; 
-  font-family: Brush Script MT;
-}
-
-.social-icons2 #insta {
-    display: flex;
-    width: 40px;
-    height: 40px;
+body.dark-mode .right-side {
     background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    top:45%;
-    left:25%;
+    outline-color: #666;
 }
 
-.social-icons2 #twitter{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    top:45%;
-    left:38%;
-}
-
-.social-icons2 #facebook{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    top:45%;
-    left:51%;
-}
-
-.social-icons2 #linkedin {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    top:45%;
-    left:63%;
-}
-
-.social-icons2 #gmail{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    line-height: 40px;
-    color: #fff;
-    position:absolute;
-    top:45%;
-    left:76%;
-}
-
-.divisions #buttons1 {
-    font-size: 18px;
-    bottom:280px;
-    right:0;
-    background-color:black;
-    position:absolute;
-    color:white;
-    height:40px;
-    text-align:center;
-    width:100%;
-    cursor: pointer;
-    opacity: 0.3em;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-#buttons1:hover {
-    color: red;
-}
-
-#buttons1:active {
-    border: 2px solid white;
-    color:red;
-    font-size: 16px;
-}
-
-.divisions #buttons2 {
-    font-size: 18px;
-    bottom:210px;
-    right:0;
-    background-color:black;
-    position:absolute;
-    color:white;
-    height:40px;
-    text-align:center;
-    width:100%;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-#buttons2:hover {
-    color: red;
-}
-
-#buttons2:active {
-    border: 2px solid white;
-    color:red;
-    font-size: 16px;
-}
-
-.divisions #buttons3 {
-    font-size: 18px;
-    bottom:140px;
-    right:0;
-    background-color:black;
-    position:absolute;
-    color:white;
-    height:40px;
-    text-align:center;
-    width:100%;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-#buttons3:hover {
-    color: red;
-}
-
-#buttons3:active {
-    border: 2px solid white;
-    color:red;
-    font-size: 16px;
-}
-
-.divisions #buttons4 {
-    font-size: 18px;
-    bottom:70px;
-    right:0;
-    background-color:black;
-    position:absolute;
-    color:white;
-    height:40px;
-    text-align:center;
-    width:100%;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-#buttons4:hover {
-    color: red;
-}
-
-#buttons4:active {
-    border: 2px solid white;
-    color:red;
-    font-size: 16px;
-}
-
-.divisions #buttons5 {
-    font-size: 18px;
-    bottom:0;
-    right:0;
-    background-color:black;
-    position:absolute;
-    color:white;
-    height:40px;
-    text-align:center;
-    width:100%;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-#buttons5:hover {
-    color: red;
-}
-
-#buttons5:active {
-    border: 2px solid white;
-    color:red;
-    font-size: 16px;
-}
-
-.welcome-description:hover {
-  color: lightgreen;
-}
-
-#welcome-description2:hover {
-    color: red;
-}
-
-#welcome-description2:active{
-  color: red;
-  text-decoration: underline;
-}
-
-.welcome-description::before{
-  font-family: "Brush Script MT", cursive;
-  content: "Full Stack Developer";
-  animation: changeContent 12s infinite;
-}
-.welcome-description2::before {
-  content: "Full Stack Developer";
-  animation: changeContent 12s infinite;
-}
-
-@keyframes changeContent {
-  0%, 8.33% {
-    content: "Full Stack Developer";
-  }
-  8.34%, 16.66% {
-    content: "App Developer";
-  }
-  16.67%, 25% {
-    content: "Ethical Hacker and Cybersecurity";
-  }
-  25.01%, 33.33% {
-    content: "Full Stack Developer";
-  }
-  33.34%, 41.66% {
-    content: "App Developer";
-  }
-  41.67%, 50% {
-    content: "Ethical Hacker and Cybersecurity";
-  }
-  50.01%, 58.33% {
-    content: "Full Stack Developer";
-  }
-  58.34%, 66.66% {
-    content: "App Developer";
-  }
-  66.67%, 75% {
-    content: "Ethical Hacker and Cybersecurity";
-  }
-  75.01%, 83.33% {
-    content: "Full Stack Developer";
-  }
-  83.34%, 91.66% {
-    content: "App Developer";
-  }
-  91.67%, 100% {
-    content: "Ethical Hacker and Cybersecurity";
-  }
-}
-
-.hover-effect:hover{
-  color:red;
-}
-
-.hover-effect:active{
-  color:lightgreen;
-}
-
-.hover-effect2:hover{
-  color:red;
-  font-family: 'Kaushan Script', cursive;
-}
-
-.hover-effect2:active{
-  color:lightgreen;
-}
-
-.right-side2 h1{
-  color:white; 
-  position:absolute; 
-  bottom:650px; 
-  width:100%; 
-  height: 85px;
-  background-color: hsl(0, 2%, 19%); 
-  padding-left: 3%; 
-  font-size:60px;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.right-side2 p{
-  color:white;
-  padding-top: 16%;
-  font-size: 20px;
-}
-
-.right-side2 #symbol1:hover,#symbol1:hover,#symbol2:hover,#symbol3:hover,#symbol4:hover,#symbol5:hover,#symbol6:hover,#symbol7:hover,#symbol8:hover,#symbol9:hover,#symbol10:hover{
-  color:red;
-  font-family: 'Josefin Slab', serif;
-} 
-
-.right-side2 #symbol1:active,#symbol1:active,#symbol2:active,#symbol3:active,#symbol4:active,#symbol5:active,#symbol6:active,#symbol7:active,#symbol8:active,#symbol9:active,#symbol10:active{
-  color:lightgreen;
-  text-decoration: underline;
-}
-
-.page-section2{
-  height:1000px;
-  overflow: hidden;
-}
-
-footer {
-  background-color: #222;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer .copyright {
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover,
-footer a:active {
-  color: #ccc;
+#image2:hover {
+    transform: rotate(360deg); 
+    transition: transform 2s ease; 
 }

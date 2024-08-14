@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Anand Portfolio</title>
+    <link rel="stylesheet" href="CSS/Skills.css">
+    <link rel="shortcut icon" href="IMAGES/LOGO.jpeg" type="image/jpeg" alt="logo">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEX/4vEAJxZn5V43eCl/NJfGzOwr1/JWy6bY" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <!-- Image and heading on the left side -->
+                    <div class="col-md-6 order-md-1" id="header-left">
+                        <img src="IMAGES/logo2.jpg" alt="logo" class="img-fluid rounded-circle fade-in delay-1">
+                        <h1 class="text-white d-inline smaller-font fade-in delay-2">ANAND PORTFOLIO</h1>
+                    </div>
+    
+                    <!-- Navigation buttons on the right side -->
+                    <div class="col-md-6 order-md-2 text-md-right fade-in" id="header-right">
+                        <nav class="navbar navbar-expand-md navbar-dark">
+                            <!-- Toggler button for small screens -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+    
+                            <!-- Navbar items -->
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ml-auto flex-nowrap">
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-3 fade-in" href="index.html" id="button1">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-4 fade-in" href="aboutme.html" id="button2">About Me</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-5 fade-in" href="education.html" id="button3">Education</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link delay-6 fade-in" href="Skills.html" id="button4">Skills</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-7 fade-in" href="Certificates.html" id="button5">Certificates</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-8 fade-in" href="Project.html" id="button6">Projects</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link delay-9 fade-in" href="Experience.html" id="button7">Participations & Experience</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <label class="toggle-switch">
+                                          <input type="checkbox" onclick="toggleDarkMode()" id="darkModeToggle">
+                                          <span class="slider"></span>
+                                      </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>  
+        <div class="container-fluid">
+            <div class="ripple-background">
+                <div class="circle xxlarge shade1"></div>
+                <div class="circle xlarge shade2"></div>
+                <div class="circle large shade3"></div>
+                <div class="circle medium shade4"></div>
+                <div class="circle small shade5"></div>
+                <div class="circle xxlarge shade1 right"></div>
+                <div class="circle xlarge shade2 right"></div>
+                <div class="circle large shade3 right"></div>
+                <div class="circle medium shade4 right"></div>
+                <div class="circle small shade5 right"></div>
+            </div>
+        </div>
+        <div class="container text-center mt-5">
+            <div class="skills-container">
+                <div class="skills-pages">
+                    <!-- Skill Page 1 -->
+                    <div class="skills-page">
+                        <h2 class="mb-4">Skills in Full Stack development</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="fullstack1">
+                                    <img id="htmlimage" src="IMAGES/html.png" alt="HTML" class="img-fluid mb-2">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack1">
+                                    <img id="cssimage" src="IMAGES/CSS.png" alt="CSS" class="img-fluid mb-2">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack1">
+                                    <img id="javascriptimage" src="IMAGES/Javascript.png" alt="JAVASCRIPT"
+                                        class="img-fluid mb-2">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack2">
+                                    <a href="https://github.com/a1n13a1n13d4" class="img-fluid mb-2">
+                                        <img id="GitHubimage" src="IMAGES/GitHub.png" alt="GITHUB">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack2">
+                                    <img id="Bootstrapimage" src="IMAGES/bootstrap.png" alt="BOOTSTRAP" class="img-fluid mb-2">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack2">
+                                    <img id="Mysqlimage" src="IMAGES/mysql.png" alt="MYSQL" class="img-fluid mb-2">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fullstack1">
+                                    <img id="phpimage" src="IMAGES/PHP.png" alt="PHP" class="img-fluid mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Skill Page 2 -->
+                    <div class="skills-page">
+                        <h2>Skills in App development</h2>
+                        <!-- Add content for App development skills -->
+                    </div>
+    
+                    <!-- Skill Page 3 -->
+                    <div class="skills-page">
+                        <h2>Skills in Cybersecurity & Ethical Hacking</h2>
+                        <!-- Add content for Cybersecurity & Ethical Hacking skills -->
+                    </div>
+    
+                    <!-- Skill Page 4 -->
+                    <div class="skills-page">
+                        <h2>Skills in Data Science</h2>
+                    </div>
+    
+                    <!-- Add more skill pages as needed -->
+    
+                    <!-- Controls for navigating between skill pages -->
+                    <div class="controls mt-3 fixed-bottom">
+                        <div class="control-btn left-btn" onclick="showPage('prev')">&#8249;</div>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <div class="control-btn right-btn" onclick="showPage('next')"> &#8250;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <footer>
+        <div class="social-media">
+          <a href="https://www.instagram.com/your_instagram_account" class="social-icon"><img src="IMAGES/Instagram.jpg" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/your_linkedin_account" class="social-icon"><img src="IMAGES/linkedin.jpg" alt="LinkedIn"></a>
+          <a href="https://www.facebook.com/your_facebook_account" class="social-icon"><img src="IMAGES/facebook.jpg" alt="Facebook"></a>
+          <a href="https://www.twitter.com/your_twitter_account" class="social-icon"><img src="IMAGES/twitter.jpg" alt="Twitter"></a>
+          <a href="mailto:your_email@example.com" class="social-icon"><img src="IMAGES/gmail.jpg" alt="Gmail"></a>
+        </div>
+        <p>Copyright © 2024, <a href="mailto:sanand03072005@gmail.com">Anand Portfolio</a> All Rights Reserved.</p>
+      </footer> 
+
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>            
+            // Add Pages coding
+            document.addEventListener("DOMContentLoaded", function() {
+            var currentPageIndex = 0;
+            var pages = document.querySelectorAll(".skills-page");
+            var dots = document.querySelectorAll(".dot");
+
+            function showPage(direction) {
+                if (direction === 'next') {
+                    currentPageIndex = (currentPageIndex + 1) % pages.length;
+                } else if (direction === 'prev') {
+                    currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+                }
+    
+                pages.forEach(function(page, index) {
+                    page.style.transform = "translateX(-" + currentPageIndex * 100 + "%)";
+                    dots[index].classList.toggle("active", index === currentPageIndex);
+                });
+            }
+
+            showPage(); // Show the initial page
+
+            // Attach event listeners to the control buttons
+            document.querySelector(".left-btn").addEventListener("click", function() {
+                showPage('prev');
+            });
+
+            document.querySelector(".right-btn").addEventListener("click", function() {
+                showPage('next');
+            });
+        });
+        
+    function toggleDarkMode() {
+        // Toggle the dark mode class on the body
+        document.body.classList.toggle('dark-mode');
+
+        // Toggle the dark mode class on the footer
+        document.querySelector('footer').classList.toggle('dark-mode');
+
+        // Toggle the dark mode class on social media icons
+        const socialIcons = document.querySelectorAll('.social-icon img');
+        socialIcons.forEach(icon => icon.classList.toggle('dark-mode'));
+
+        // Optionally, you can add more elements to toggle for dark mode
+        // For example, you can toggle the dark mode class on other specific elements
+
+        // Save the dark mode state in localStorage
+        const isDarkModeEnabled = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkModeEnabled', isDarkModeEnabled);
+    }
+
+    // Check the dark mode state from localStorage on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        const isDarkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+
+        if (isDarkModeEnabled) {
+            toggleDarkMode();
+        }
+    });
+</script>
+
+</body>
+</html>

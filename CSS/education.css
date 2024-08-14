@@ -17,36 +17,10 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.5s, color 0.5s;
-  cursor: url('IMAGES/cursor dot.png'), auto;
 }
 
-.dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li {
-  margin-bottom: 5px;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 5px 0;
-  color: #333;
-  text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-  color: #FF9800;
+h2,h1{
+  color: var(--text-color);
 }
 
 .animated-background {
@@ -101,8 +75,11 @@ body {
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 30px;
   height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  overflow: hidden;
 }
 
 .toggle-switch input {
@@ -118,39 +95,25 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: var(--background-color);
+  transition: background-color 0.4s;
   border-radius: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  content: '🌜'; 
+  font-size: 18px;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  content: '🌞'; 
 }
 
+/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -334,16 +297,6 @@ h2:hover,
   color: var(--hover-color);
 }
 
-#cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-}
-
 button {
   position: fixed;
   bottom: 20px;
@@ -397,9 +350,14 @@ footer {
   padding: 20px 0;
 }
 
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
 .social-media {
   margin-bottom: 10px;
-}
+} 
 
 .social-icon {
   display: inline-block;
@@ -424,13 +382,3 @@ p {
   color: #555;
   margin: 0;
 }
-
-#cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-} 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Anand Portfolio</title>
+  <link rel="shortcut icon" href="IMAGES/LOGO.jpeg" type="image/jpeg" alt="logo">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="CSS/education.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <div class="all" id="Education">
+    <header>
+      <div class="container">
+        <div class="header-content" data-aos="fade-right">
+          <div class="logo">
+            <img src="IMAGES/logo2.jpg" alt="logo">
+          </div>
+          <h1 class="portfolio-name">ANAND PORTFOLIO</h1>
+        </div>
+        <nav class="navigation" data-aos="fade-left">
+          <ul>
+            <li class="nav-item"><a href="index.html" id="button1">Home</a></li>
+            <li class="nav-item"><a href="aboutme.html" id="button2">About</a></li>
+            <li class="nav-item active"><a href="education.html" id="button3">Education</a></li>
+            <li class="nav-item"><a href="Skills.html" id="button4">Skills</a></li>
+            <li class="nav-item"><a href="Certificates.html" id="button5">Certificates</a></li>
+            <li class="nav-item"><a href="Project.html" id="button6">Projects</a></li>
+            <li class="nav-item"><a href="Experience.html" id="button7">Participations & Experience</a></li>
+          </ul>
+        </nav>                
+        <label class="toggle-switch">
+          <input type="checkbox" onclick="toggleDarkMode()" id="darkModeToggle">
+          <span class="slider"></span>
+        </label> 
+      </div>
+    </header><br><br>
+    <div class="animated-background"></div>
+    <section class="education">
+      <div class="education-title" data-aos="fade-down">
+          <h2>EDUCATION</h2>
+        </div>
+      <div class="container">
+        
+        <div class="education-content">
+          <div class="education-item" data-aos="fade-right" data-aos-delay="200">
+            <h3>Nursery and Primary</h3>
+            <p>Harvey Nursery & Primary School</p>
+            <p>Completed in 2015</p>
+          </div>
+          <div class="education-item" data-aos="fade-left" data-aos-delay="400">
+            <h3>High School</h3>
+            <p>Virudhunagar Hindu Nadar Higher Secondary School</p>
+            <p>Completed in 2022</p>
+          </div>
+          <div class="education-item" data-aos="fade-right" data-aos-delay="200">
+            <h3>Undergraduate degree</h3>
+            <p>Bachelor of Computer Science</p>
+            <p>Major: Computer Science</p>
+            <p>Graduated in 2025</p>
+          </div>
+          <div class="education-item" data-aos="fade-left" data-aos-delay="400">
+            <h3>Postgraduate degree</h3>
+            <p></p>
+            <p></p>
+            <p>Graduated in 2027</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="social-media">
+        <a href="https://www.instagram.com/your_instagram_account" class="social-icon"><img src="IMAGES/Instagram.jpg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/your_linkedin_account" class="social-icon"><img src="IMAGES/linkedin.jpg" alt="LinkedIn"></a>
+        <a href="https://www.facebook.com/your_facebook_account" class="social-icon"><img src="IMAGES/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.twitter.com/your_twitter_account" class="social-icon"><img src="IMAGES/twitter.jpg" alt="Twitter"></a>
+        <a href="mailto:your_email@example.com" class="social-icon"><img src="IMAGES/gmail.jpg" alt="Gmail"></a>
+      </div>
+      <p>Copyright © 2024, <a href="mailto:sanand03072005@gmail.com">Anand Portfolio</a> All Rights Reserved.</p>
+    </footer>    
+  </div> 
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const animatedBackground = document.querySelector('.animated-background');
+      
+      body.classList.toggle('dark-mode');
+      animatedBackground.classList.toggle('dark-mode');
+    }
+  </script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>
